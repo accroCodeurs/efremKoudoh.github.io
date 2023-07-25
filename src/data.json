@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/image/cagesi.PNG",
+        "nom": "Site web Cagesi",
+        "lien": "https://www.cagesi.com",
+        "description": "Description du projet 1...",
+        "date": "2020",
+        "categorie": "Site Web CAGESI",
+        "etat": "Terminer",
+        "filter": "filter-web"
+    },
+    {
+        "id": 2,
+        "image": "/assets/image/mont-carmel-vitrine.PNG",
+        "nom": "ThermoHair",
+        "lien": "https://institutdebeaute-montcarmel.com/",
+        "description": "Description du projet 2...",
+        "date": "2020",
+        "categorie": "Site vitrine & Gestion Salon",
+        "etat": "Terminer",
+        "filter": "filter-web"
+    },
+    {
+        "id": 3,
+        "image": "/assets/image/eschool.PNG",
+        "nom": "ThermoSchool",
+        "lien": "https://thermoschool.cagesi.com",
+        "description": "Description du projet 3...",
+        "date": "2021-2022",
+        "categorie": "Application Gestion d'école",
+        "etat": "Terminer",
+        "filter": "filter-app"
+    },
+    {
+        "id": 4,
+        "image": "/assets/image/bambule.PNG",
+        "nom": "Restaurant Bambule",
+        "lien": "https://bambulemangersain.com",
+        "description": "Description du projet 1...",
+        "date": "2022",
+        "categorie": "Application Gestion Restaurant",
+        "etat": "Terminer",
+        "filter": "filter-app"
+      },
+      {
+        "id": 5,
+        "image": "",
+        "nom": "Restaurant Felicité",
+        "lien": "",
+        "description": "Description du projet 2...",
+        "date": "2023",
+        "categorie": "Application Mobile Gestion Restaurant",
+        "etat": "Terminer",
+        "filter": "filter-app"
+      },
+      {
+        "id": 6,
+        "image": "/assets/image/termoloca.PNG",
+        "nom": "ThermoLoca",
+        "lien": "",
+        "description": "Description du projet 3...",
+        "date": "2023",
+        "etat": "En Cours",
+        "categorie": "Application Gestion Location",
+        "filter": "filter-app"
+      },
+      {
+        "id": 7,
+        "image": "/assets/image/portofolio.PNG",
+        "nom": "Mon Portofolio",
+        "lien": "",
+        "description": "Description du projet 3...",
+        "date": "2023",
+        "etat": "Terminer",
+        "categorie": "Mon Portofolio",
+        "filter": "filter-web"
+      },
+      {
+        "id": 8,
+        "image": "/assets/image/restaurantvitrine.PNG",
+        "nom": "RestaurantVitrine",
+        "lien": "",
+        "description": "Description du projet 3...",
+        "date": "2023",
+        "etat": "En Cours",
+        "categorie": "Application vitrine de restaurant",
+        "filter": "filter-web"
+      }
+  ]
+  
