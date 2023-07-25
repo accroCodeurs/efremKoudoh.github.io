@@ -3,11 +3,16 @@ import React, { useState, useEffect } from "react";
 export default function PourcentageScreen() {
   const skillsData = [
     { name: "HTML", value: 100, target: 100 },
-    { name: "CSS", value: 90, target: 90 },
+    { name: "CSS", value: 60, target: 60 },
     { name: "JavaScript", value: 75, target: 75 },
     { name: "PHP", value: 80, target: 80 },
     { name: "WordPress/CMS", value: 90, target: 90 },
-    { name: "Photoshop", value: 55, target: 55 },
+    { name: "Laravel", value: 80, target: 80 },
+    { name: "Symfony", value: 60, target: 60 },
+    { name: "Reactjs/React Native", value: 70, target: 70 },
+    { name: "Node.js", value: 70, target: 70 },
+    { name: "MySql", value: 80, target: 80 },
+    
   ];
 
   const [skills, setSkills] = useState(skillsData);
@@ -39,7 +44,7 @@ export default function PourcentageScreen() {
 
           <div className="row skills-content">
             <div className="col-lg-6" data-aos="fade-up">
-              {skills.slice(0, 3).map((skill) => (
+              {skills.slice(0, 5).map((skill) => (
                 <div className="progress" key={skill.name}>
                   <span className="skill">
                     {skill.name} <i className="val">{skill.value}%</i>
@@ -59,7 +64,7 @@ export default function PourcentageScreen() {
             </div>
 
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              {skills.slice(3).map((skill) => (
+              {skills.slice(5).map((skill) => (
                 <div className="progress" key={skill.name}>
                   <span className="skill">
                     {skill.name} <i className="val">{skill.value}%</i>

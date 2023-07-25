@@ -8,109 +8,112 @@ export function ResumeScreen() {
           <div className="section-title">
             <h2>Resume</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
+              L'apprentissage est le père de la compétence.
+            </p>
+            <p>
+              --- Simon de Bignicourt
             </p>
           </div>
 
           <div className="row">
             <div className="col-lg-6" data-aos="fade-up">
-              <h3 className="resume-title">Sumary</h3>
+              <h3 className="resume-title">Sommaire</h3>
               <div className="resume-item pb-0">
-                <h4>Alex Smith</h4>
+                <h4>Efrem Sitsou Selinam KOUDOH</h4>
                 <p>
                   <em>
-                    Innovative and deadline-driven Graphic Designer with 3+
-                    years of experience designing and developing user-centered
-                    digital/print marketing material from initial concept to
-                    final, polished deliverable.
+                    Etudiant en troisieme année ingenieur informatique à ESAIP aprés mon BAC+2 pour ainsi agrandir mes connaissance dans la matiére et mes relations
                   </em>
                 </p>
                 <ul>
-                  <li>Portland par 127,Orlando, FL</li>
-                  <li>(123) 456-7891</li>
-                  <li>alice.barkley@example.com</li>
+                  <li>Angers, France</li>
+                  <li>(228) 92 35 05 64</li>
+                  <li>ekoudoh.efrem.sitsou@gmail.com</li>
                 </ul>
               </div>
 
               <h3 className="resume-title">Education</h3>
               <div className="resume-item">
-                <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                <h5>2015 - 2016</h5>
+                <h4>Formation Modulaire Maintenance Informatique</h4>
+                <h5>2017 - 2018</h5>
                 <p>
-                  <em>Rochester Institute of Technology, Rochester, NY</em>
+                  <em>CIB-INTA, Lomé, TOGO</em>
                 </p>
                 <p>
-                  Qui deserunt veniam. Et sed aliquam labore tempore sed
-                  quisquam iusto autem sit. Ea vero voluptatum qui ut
-                  dignissimos deleniti nerada porti sand markend
+                  Formation modulaire en maintenance des équipement informatique et réseaux.
                 </p>
               </div>
               <div className="resume-item">
-                <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                <h5>2010 - 2014</h5>
+                <h4>Brevet de Technicien Superieur Developpement d'Application</h4>
+                <h5>2018 - 2020</h5>
                 <p>
-                  <em>Rochester Institute of Technology, Rochester, NY</em>
+                  <em>Institut Polytechnique DEFITECH, Lomé, TOGO</em>
                 </p>
                 <p>
-                  Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-                  reiciendis et quis Eius vel ratione eius unde vitae rerum
-                  voluptates asperiores voluptatem Earum molestiae consequatur
-                  neque etlon sader mart dila
+                  Obtention du diplôme de développeur d'application avec mention et troisième de ma promotion.
                 </p>
               </div>
             </div>
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <h3 className="resume-title">Professional Experience</h3>
               <div className="resume-item">
-                <h4>Senior graphic design specialist</h4>
-                <h5>2019 - Present</h5>
+                <h4>Developpeur d'Aplication web & mobile</h4>
+                <h5>2021 - 2023</h5>
                 <p>
-                  <em>Experion, New York, NY </em>
+                  <em>CAGESI, Lomé, TOGO </em>
                 </p>
                 <ul>
                   <li>
-                    Lead in the design, development, and implementation of the
-                    graphic, layout, and production communication materials
+                    Création de solutions pour pages web 
                   </li>
                   <li>
-                    Delegate tasks to the 7 members of the design team and
-                    provide counsel on all aspects of the project.{" "}
+                    Développement de stratégies de Web responsive 
                   </li>
                   <li>
-                    Supervise the assessment of all graphic materials in order
-                    to ensure quality and accuracy of the design
+                    Développement des applications mobile
                   </li>
                   <li>
-                    Oversee the efficient use of production project budgets
-                    ranging from $2,000 - $25,000
+                    Gestion de la planification 
+                  </li>
+                  <li>
+                    Définition du besoin en logiciels auprès du client 
+                  </li>
+                  <li>
+                    Définition des fonctionnalités á créer 
+                  </li>
+                  <li>
+                    Analyse de l'ergonomie d'applications
+                  </li>
+                  <li>
+                    Conception de programmes spécifiques 
+                  </li>
+                  <li>
+                    Collaboration avec des graphistes pour création d'applications 
+                  </li>
+                  <li>
+                    Mises á jour de fonctionnalités sur les logiciels 
+                  </li>
+                  <li>
+                    
+                    Contacts avec sociétés clientes 
                   </li>
                 </ul>
               </div>
               <div className="resume-item">
-                <h4>Graphic design specialist</h4>
-                <h5>2017 - 2018</h5>
+                <h4>Developpeur web</h4>
+                <h5>2020 - 2021</h5>
                 <p>
-                  <em>Stepping Stone Advertising, New York, NY</em>
+                  <em>CAGESI, Lomé, TOGO</em>
                 </p>
                 <ul>
                   <li>
-                    Developed numerous marketing programs (logos,
-                    brochures,infographics, presentations, and advertisements).
+                    Stage pratique au sein du cabinet CAGESI Sarl comme developpeur d 'application web, mobile et desktop.
                   </li>
                   <li>
-                    Managed up to 5 projects or tasks at a given time while
-                    under pressure
+                    Création de solutions pour pages web 
                   </li>
                   <li>
-                    Recommended and consulted with clients on the most
-                    appropriate graphic design
-                  </li>
-                  <li>
-                    Created 4+ design presentations and proposals a month for
-                    clients and account managers
+                    Développement de stratégies de Web responsive 
                   </li>
                 </ul>
               </div>

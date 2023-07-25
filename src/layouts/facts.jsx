@@ -7,8 +7,8 @@ export function FactScreen(){
                 <div className="container">
         
                 <div className="section-title">
-                    <h2>Facts</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Faits</h2>
+                    <p></p>
                 </div>
         
                 <div className="row no-gutters">
@@ -17,7 +17,7 @@ export function FactScreen(){
                     <div className="count-box">
                         <i className="bi bi-emoji-smile"></i>
                         <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" className="purecounter"></span>
-                        <p><strong>Happy Clients</strong> consequuntur quae</p>
+                        <p><strong>Autonome</strong> </p>
                     </div>
                     </div>
         
@@ -25,7 +25,7 @@ export function FactScreen(){
                     <div className="count-box">
                         <i className="bi bi-journal-richtext"></i>
                         <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" className="purecounter"></span>
-                        <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+                        <p><strong>À l'écoute</strong> </p>
                     </div>
                     </div>
         
@@ -33,7 +33,7 @@ export function FactScreen(){
                     <div className="count-box">
                         <i className="bi bi-headset"></i>
                         <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" className="purecounter"></span>
-                        <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+                        <p><strong>Adaptable</strong> </p>
                     </div>
                     </div>
         
@@ -41,7 +41,7 @@ export function FactScreen(){
                     <div className="count-box">
                         <i className="bi bi-people"></i>
                         <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" className="purecounter"></span>
-                        <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+                        <p><strong>Calme</strong> </p>
                     </div>
                     </div>
         

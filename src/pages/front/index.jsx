@@ -26,7 +26,6 @@ export function IndexFront(){
                 <ResumeScreen/>
                 <PortofolioScreen/>
                 <ServiceScreen/>
-                <TestimonialScreen/>
                 <ContactScreen/>
             </main>
 

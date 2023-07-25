@@ -8,10 +8,7 @@ export function ServiceScreen() {
           <div className="section-title">
             <h2>Services</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
+             
             </p>
           </div>
 
@@ -21,11 +18,11 @@ export function ServiceScreen() {
                 <i className="bi bi-briefcase"></i>
               </div>
               <h4 className="title">
-                <a href="">Lorem Ipsum</a>
+                <a href="">Gestion de projets web</a>
               </h4>
               <p className="description">
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi sint occaecati cupiditate non provident
+                Site vitrine, corporate, évènementiel, e-commerce, intranet,
+                application mobile
               </p>
             </div>
             <div
@@ -37,11 +34,10 @@ export function ServiceScreen() {
                 <i className="bi bi-card-checklist"></i>
               </div>
               <h4 className="title">
-                <a href="">Dolor Sitema</a>
+                <a href="">Responsive design</a>
               </h4>
               <p className="description">
-                Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat tarad limino ata
+              Compatible tous supports, tablette & application mobile.
               </p>
             </div>
             <div
@@ -53,11 +49,11 @@ export function ServiceScreen() {
                 <i className="bi bi-bar-chart"></i>
               </div>
               <h4 className="title">
-                <a href="">Sed ut perspiciatis</a>
+                <a href="">Intégration Web</a>
               </h4>
               <p className="description">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur
+                Des intégrations (X)HTML / CSS respectueuses des standards du
+                Web
               </p>
             </div>
             <div
@@ -69,11 +65,11 @@ export function ServiceScreen() {
                 <i className="bi bi-binoculars"></i>
               </div>
               <h4 className="title">
-                <a href="">Magni Dolores</a>
+                <a href="">Développements spécifiques</a>
               </h4>
               <p className="description">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum
+              Des outils adaptés à votre coeur de métier,
+applications & solutions personnalisées
               </p>
             </div>
             <div
@@ -85,11 +81,11 @@ export function ServiceScreen() {
                 <i className="bi bi-brightness-high"></i>
               </div>
               <h4 className="title">
-                <a href="">Nemo Enim</a>
+                <a href="">Dynamisme des pages</a>
               </h4>
               <p className="description">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque
+              Des animations de contenu non intrusives
+pour embellir votre projet.
               </p>
             </div>
             <div
@@ -101,11 +97,11 @@ export function ServiceScreen() {
                 <i className="bi bi-calendar4-week"></i>
               </div>
               <h4 className="title">
-                <a href="">Eiusmod Tempor</a>
+                <a href="">Interface d'administration</a>
               </h4>
               <p className="description">
-                Et harum quidem rerum facilis est et expedita distinctio. Nam
-                libero tempore, cum soluta nobis est eligendi
+              Outils spécifiques au bon fonctionnement
+de votre entreprise.
               </p>
             </div>
           </div>

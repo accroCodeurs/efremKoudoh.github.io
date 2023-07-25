@@ -12,7 +12,7 @@ export function FooterScreen() {
             </strong>
           </div>
           <div className="credits">
-            Designed by Efrem KOUDOH</a>
+            Designed by Efrem KOUDOH
           </div>
         </div>
       </footer>

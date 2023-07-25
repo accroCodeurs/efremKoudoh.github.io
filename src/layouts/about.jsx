@@ -9,17 +9,17 @@ export function AboutScreen() {
                     <div className="section-title">
                         <h2>A Propos de Moi</h2>
                         <p>
+                            Bonjour ! Je m’appelle Efrem Sitsou Selinam KOUDOH, je suis un développeur Web & Mobile junior et actuellement étudiant à l'ESAIP à Angers.
 
-                            Hello ! Je m’appelle Julien Dahy, développeur Web junior devenu Tech Manager.
-                            Auparavant, j’ai effectué plusieurs années en tant que téléconseiller dans l’expertise technique (Canal+ / Orange)
-                            ce qui m’a permis d’acquérir de très bonnes compétences telles que l’organisation, l’écoute, le conseil 
-                            ainsi que des qualités relationnelles importantes.
-                            J’ai profité du retour à mon Alsace natale pour effectuer une reconversion professionnelle dans le
-                            Développement Web, domaine qui m’intéressait depuis de nombreuses années.
-                            J’ai donc suivi la formation Développeur Intégrateur au sein du CCI Campus de Colmar. Suite à 
-                            l’obtention du Bac+2, j’ai obtenu la confiance d’Annei qui m’a embauché en septembre 2020 et chez 
-                            qui je suis devenu Tech Manager en 2022. Je continue donc à travailler chaque jour avec envie, motivation et des idées plein la tête.
+                            Après avoir suivi une formation en maintenance informatique, j'ai découvert ma passion pour l'informatique côté logiciel. Cela m'a conduit à 
+                            poursuivre des études en Développement d'Applications, où j'ai acquis de solides compétences en Programmation, Bases de données, Conception 
+                            d'interfaces utilisateur, et bien plus encore. En parallèle, j'ai également développé d'importantes qualités relationnelles.
+                        </p>
+                        <p>
+                            Grâce à une opportunité de stage, j'ai eu l'occasion de démontrer mon excellence en tant que développeur, ce qui m'a valu d'être embauché par 
+                            l'entreprise en septembre 2021. Depuis lors, j'ai travaillé sur divers projets, améliorant constamment mes compétences et développant de nouvelles idées.
 
+                            Mon expérience jusqu'en avril 2023 m'a permis de devenir un développeur compétent, et je continue à m'épanouir chaque jour avec une envie et une motivation inépuisables.
                         </p>
                     </div>
 
@@ -30,8 +30,8 @@ export function AboutScreen() {
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <h3>Concepteur d'Application Web &amp; Mobile.</h3>
                             <p className="fst-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
+                                Je suis passionné par les technologies web et mobiles, et je suis constamment à la recherche de nouveaux défis pour enrichir mes connaissances 
+                                et développer des solutions innovantes.
                             </p>
                             <div className="row">
                                 <div className="col-lg-6">
@@ -52,8 +52,9 @@ export function AboutScreen() {
                                 </div>
                             </div>
                             <p>
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+                                J'ai hâte de partager mes compétences et mon enthousiasme avec le monde du développement d'applications !
+
+                                N'hésitez pas à me contacter pour toute collaboration ou projet intéressant.
                             </p>
                         </div>
                     </div>
