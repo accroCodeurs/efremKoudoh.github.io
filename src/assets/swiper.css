@@ -1,0 +1,1023 @@
+/*!
+ * Swiper 8.0.6
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * http://swiperjs.com
+ *
+ * Copyright 2018-present Vladimir Kharlampidi
+ * Released under the MIT License
+ *
+ * Released on: October 21, 2021
+ */
+
+/* Core Styles */
+.swiper {
+    position: relative;
+    direction: ltr;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .swiper-container {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  .swiper-container-no-flexbox,
+  .swiper-container-no-flexbox .swiper-slide {
+    display: block;
+  }
+  .swiper-container-vertical > .swiper-wrapper {
+    flex-direction: column;
+  }
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    /* Fix of Webkit flickering */
+    will-change: transform;
+  }
+  .swiper-container-android .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+    /* fix not clickable swiper on android 2.3 */
+  }
+  .swiper-container-multirow > .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+  .swiper-container-multirow-column > .swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .swiper-container-free-mode > .swiper-wrapper {
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    flex-shrink: 0;
+    /* Fix of Webkit flickering */
+    will-change: transform;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .swiper-container-autoheight,
+  .swiper-container-autoheight .swiper-slide {
+    height: auto;
+  }
+  .swiper-container-autoheight .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+  /* Auto Height Calculation */
+  .swiper-container[data-autoheight="true"] {
+    height: auto;
+  }
+  .swiper-container[data-autoheight="true"] .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+  .swiper-container[data-autoheight="true"] .swiper-slide {
+    height: auto;
+  }
+  /* 3D Effects */
+  .swiper-container-3d {
+    perspective: 1200px;
+  }
+  .swiper-container-3d .swiper-wrapper,
+  .swiper-container-3d .swiper-slide,
+  .swiper-container-3d .swiper-slide-shadow-left,
+  .swiper-container-3d .swiper-slide-shadow-right,
+  .swiper-container-3d .swiper-slide-shadow-top,
+  .swiper-container-3d .swiper-slide-shadow-bottom,
+  .swiper-container-3d .swiper-cube-shadow {
+    transform-style: preserve-3d;
+  }
+  .swiper-container-3d .swiper-slide-shadow-left,
+  .swiper-container-3d .swiper-slide-shadow-right,
+  .swiper-container-3d .swiper-slide-shadow-top,
+  .swiper-container-3d .swiper-slide-shadow-bottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .swiper-container-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .swiper-container-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .swiper-container-3d .swiper-slide-shadow-top {
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .swiper-container-3d .swiper-slide-shadow-bottom {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .swiper-container-3d .swiper-cube,
+  .swiper-container-3d .swiper-slide {
+    visibility: visible;
+  }
+  .swiper-container-3d .swiper-slide-shadow-left,
+  .swiper-container-3d .swiper-slide-shadow-right,
+  .swiper-container-3d .swiper-slide-shadow-top,
+  .swiper-container-3d .swiper-slide-shadow-bottom,
+  .swiper-container-3d .swiper-cube-shadow {
+    display: none;
+  }
+  /* CSS Mode */
+  .swiper-container-css-mode > .swiper-wrapper {
+    overflow: auto;
+    scrollbar-width: none;
+    /* ::webkit scrollbar is used for scrollbar prop support */
+    scrollbar-color: transparent transparent;
+  }
+  .swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar-thumb {
+    width: 0;
+    height: 0;
+  }
+  .swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Predefined Pagination Styles */
+  .swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 300ms;
+    /* Make sure transition-duration will be the same as pagination's slide duration */
+    transition-property: opacity, transform;
+    /* Set to opacity and transform as the default transition effect for bullets */
+  }
+  .swiper-pagination.swiper-pagination-hidden {
+    opacity: 0;
+  }
+  /* Common Styles */
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+  .swiper-pagination-fraction {
+    font-size: 42px;
+    color: #000;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    pointer-events: none;
+  }
+  .swiper-pagination-fraction .swiper-pagination-current,
+  .swiper-pagination-fraction .swiper-pagination-total {
+    display: inline-block;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .swiper-pagination-fraction .swiper-pagination-total {
+    margin-left: .375em;
+  }
+  /* Bullets Styles */
+  .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 10;
+    flex-wrap: wrap;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 10px;
+    background: #000;
+    opacity: 0.2;
+    margin: 8px 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007bff;
+  }
+  .swiper-pagination-bullet-active.swiper-pagination-bullet-active-active {
+    width: 20px;
+  }
+  /* Progressbar */
+  .swiper-container-horizontal > .swiper-pagination-progressbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* Scale effect */
+    transform-origin: left;
+    /* Make sure it will be always full visible */
+    transition: 300ms;
+    /* Make sure transition-duration will be the same as progressbar's slide duration */
+    transition-property: width, background-color;
+    /* Set to width and background-color as the default transition effect for progressbar */
+  }
+  /* Predefined Navigation Styles */
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  /* Next Button Styles */
+  .swiper-button-next {
+    right: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M184 28l-28 28 200 200-200 200 28 28 228-228zm128 0h40v456h-40z'/%3E%3C/svg%3E");
+  }
+  .swiper-container-rtl .swiper-button-next {
+    left: 10px;
+    right: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M328 28l28 28-200 200 200 200-28 28L100 256zm-128 0H160v456H80z'/%3E%3C/svg%3E");
+  }
+  /* Prev Button Styles */
+  .swiper-button-prev {
+    left: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M328 28l-28 28 200 200-200 200 28 28 228-228zm128 0h40v456h-40z'/%3E%3C/svg%3E");
+  }
+  .swiper-container-rtl .swiper-button-prev {
+    right: 10px;
+    left: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M184 28l28 28-200 200 200 200-28 28L56 256zm128 0H80v456h80z'/%3E%3C/svg%3E");
+  }
+  /* 3D Effects */
+  .swiper-cube,
+  .swiper-flip {
+    overflow: visible;
+  }
+  .swiper-cube-shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    /* Rotate background, solve problem with non-flatted rotated elements */
+    background-blend-mode: overlay;
+  }
+  .swiper-cube-shadow:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Via https://davidwalsh.name/css-circles */
+    background-image: radial-gradient(
+      circle farthest-corner at 50% 50%,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    opacity: 0;
+    z-index: 10;
+    transition: 300ms;
+    /* Make sure transition-duration will be the same as slide duration */
+  }
+  .swiper-container-cube .swiper-slide-shadow-left,
+  .swiper-container-cube .swiper-slide-shadow-right,
+  .swiper-container-cube .swiper-slide-shadow-top,
+  .swiper-container-cube .swiper-slide-shadow-bottom {
+    position: absolute;
+    z-index: 0;
+    /* Slide shadows */
+    opacity: 0;
+    transition: 300ms;
+    /* Make sure transition-duration will be the same as slide duration */
+  }
+  .swiper-container-cube.swiper-container-rtl .swiper-slide-shadow-left,
+  .swiper-container-cube.swiper-container-rtl .swiper-slide-shadow-right {
+    right: 0;
+    left: auto;
+  }
+  .swiper-container-cube .swiper-slide-shadow-top,
+  .swiper-container-cube .swiper-slide-shadow-bottom {
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    /* Slide shadows */
+  }
+  .swiper-container-cube .swiper-slide-shadow-left,
+  .swiper-container-cube .swiper-slide-shadow-top {
+    opacity: 1;
+    z-index: 1;
+  }
+  .swiper-container-cube .swiper-slide-shadow-right,
+  .swiper-container-cube .swiper-slide-shadow-bottom {
+    opacity: 0;
+    z-index: 0;
+  }
+  .swiper-container-fade .swiper-slide {
+    pointer-events: none;
+  }
+  .swiper-container-fade .swiper-slide .swiper-slide-content {
+    opacity: 0;
+    transition: opacity 300ms;
+    /* Make sure transition-duration will be the same as slide duration */
+    transform: scale(0.94);
+    /* Fix of flickering */
+  }
+  .swiper-container-fade .swiper-slide-active .swiper-slide-content {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* Lazy Loading */
+  .swiper-lazy-preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    /* styles are required to prevent initial flickering */
+    background-size: 42px 42px;
+    background-position: center;
+    opacity: 0;
+    transition: 300ms;
+    /* Make sure transition-duration will be the same as slide duration */
+  }
+  .swiper-lazy-preloader.swiper-lazy-preloader-visible {
+    opacity: 1;
+  }
+  /* a11y */
+  .swiper-container [aria-live="polite"] {
+    position: relative;
+    /* Fix of Webkit flickering */
+    will-change: contents;
+  }
+  .swiper-container [aria-live="polite"] .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+  }
+  /* Auto Height */
+  .swiper-container-autoheight {
+    transition-property: height;
+  }
+  /* Swiper components */
+  
+  /* Navigation */
+  .swiper-navigation {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 0;
+    width: 100%;
+  }
+  .swiper-navigation.swiper-navigation-horizontal {
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .swiper-navigation.swiper-navigation-vertical {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 300ms;
+    /* Make sure transition-duration will be the same as pagination's slide duration */
+    transition-property: background-color;
+    /* Set to background-color as the default transition effect for buttons */
+  }
+  .swiper-button-prev:focus,
+  .swiper-button-prev:hover,
+  .swiper-button-next:focus,
+  .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .swiper-button-prev:focus,
+  .swiper-button-next:focus {
+    outline: none;
+  }
+  .swiper-button-prev:not(.swiper-button-disabled):before,
+  .swiper-button-next:not(.swiper-button-disabled):before {
+    font-family: swiper-icons;
+    font-size: 20px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  .swiper-button-prev:not(.swiper-button-disabled):before {
+    content: "\e662";
+  }
+  .swiper-button-next:not(.swiper-button-disabled):before {
+    content: "\e661";
+  }
+  .swiper-button-lock {
+    display: none;
+  }
+  /* Parallax Effect */
+  .swiper-parallax {
+    position: relative;
+    overflow: hidden;
+  }
+  .swiper-parallax > .swiper-bg {
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper-parallax > .swiper-bg,
+  .swiper-parallax > .swiper-slide > img {
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .swiper-parallax > .swiper-slide {
+    overflow: hidden;
+  }
+  .swiper-parallax.swiper-slide-active > .swiper-bg {
+    opacity: 0.7;
+  }
+  .swiper-parallax.swiper-slide-active > .swiper-bg,
+  .swiper-parallax.swiper-slide-active > .swiper-slide > img {
+    transform: translate3d(0, 0, 0);
+    /* fix blinking */
+    backface-visibility: hidden;
+  }
+  /* Zoom Effect */
+  .swiper-zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .swiper-zoom-container > img,
+  .swiper-zoom-container > svg,
+  .swiper-zoom-container > canvas {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .swiper-zoom-container.swiper-zoom-container-active {
+    cursor: move;
+    cursor: grab;
+    cursor: -webkit-grab;
+  }
+  .swiper-zoom-container.swiper-zoom-container-active > img,
+  .swiper-zoom-container.swiper-zoom-container-active > svg,
+  .swiper-zoom-container.swiper-zoom-container-active > canvas {
+    cursor: move;
+    cursor: grab;
+    cursor: -webkit-grab;
+  }
+  .swiper-zoom-container.swiper-zoom-container-active.swiper-zoom-container-dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+  /* Preloaders */
+  .swiper-lazy-preloader {
+    display: none;
+  }
+  .swiper-lazy-preloader:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    z-index: 10;
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper-lazy-preloader-loaded {
+    display: block;
+  }
+  /* Swiper Coverflow Effect */
+  
+  /* Predefined Classes */
+  .swiper-container-coverflow {
+    overflow: hidden;
+  }
+  .swiper-container-coverflow .swiper-wrapper,
+  .swiper-container-flip .swiper-wrapper {
+    /* fix of default layout in IE10 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-container-coverflow .swiper-slide,
+  .swiper-container-flip .swiper-slide {
+    /* fix of default layout in IE10 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    text-align: center;
+  }
+  .swiper-container-coverflow .swiper-slide img,
+  .swiper-container-flip .swiper-slide img {
+    pointer-events: none;
+    max-width: 100%;
+    height: auto;
+  }
+  /* Coverflow params */
+  .swiper-container-coverflow .swiper-slide {
+    /* IE10 support */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* IE10 support */
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    /* IE10 support */
+    -webkit-transform-style: coverflow;
+    -ms-transform-style: coverflow;
+    /* IE10 support */
+    transform-style: coverflow;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* IE10 support */
+    position: relative;
+  }
+  .swiper-container-coverflow .swiper-slide-active,
+  .swiper-container-coverflow .swiper-slide-next,
+  .swiper-container-coverflow .swiper-slide-prev {
+    pointer-events: auto;
+  }
+  /* Coverflow effect */
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-left,
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-right,
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-top,
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-bottom {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-left {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    left: 0;
+  }
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-right {
+    background-image: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    right: 0;
+  }
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-top {
+    background-image: -webkit-gradient(
+      linear,
+      top left,
+      top right,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    top: 0;
+  }
+  .swiper-container-coverflow .swiper-slide .swiper-slide-shadow-bottom {
+    background-image: -webkit-gradient(
+      linear,
+      bottom left,
+      bottom right,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    bottom: 0;
+  }
+  .swiper-container-coverflow .swiper-slide-prev,
+  .swiper-container-coverflow .swiper-slide-next {
+    transform: translate3d(0, 0, -160px) scale(0.8);
+    z-index: 1;
+    opacity: 1;
+  }
+  .swiper-container-coverflow .swiper-slide-next:not(.swiper-slide-duplicate),
+  .swiper-container-coverflow .swiper-slide-prev:not(.swiper-slide-duplicate) {
+    pointer-events: none;
+  }
+  .swiper-container-coverflow .swiper-slide-prev .swiper-slide-content,
+  .swiper-container-coverflow .swiper-slide-next .swiper-slide-content {
+    opacity: 0;
+  }
+  .swiper-container-coverflow .swiper-slide-prev,
+  .swiper-container-coverflow .swiper-slide-next,
+  .swiper-container-flip .swiper-slide-prev,
+  .swiper-container-flip .swiper-slide-next {
+    pointer-events: auto;
+  }
+  .swiper-container-coverflow .swiper-slide-prev.swiper-slide-active,
+  .swiper-container-coverflow .swiper-slide-next.swiper-slide-active,
+  .swiper-container-flip .swiper-slide-prev.swiper-slide-active,
+  .swiper-container-flip .swiper-slide-next.swiper-slide-active,
+  .swiper-container-flip .swiper-slide-prev.swiper-slide-next,
+  .swiper-container-flip .swiper-slide-next.swiper-slide-prev {
+    pointer-events: auto;
+  }
+  .swiper-container-coverflow .swiper-slide-prev .swiper-slide-content,
+  .swiper-container-coverflow .swiper-slide-next .swiper-slide-content,
+  .swiper-container-flip .swiper-slide-prev .swiper-slide-content,
+  .swiper-container-flip .swiper-slide-next .swiper-slide-content {
+    opacity: 1;
+  }
+  .swiper-container-coverflow .swiper-slide-active {
+    z-index: 3;
+    pointer-events: auto;
+  }
+  .swiper-container-coverflow .swiper-slide-active .swiper-slide-content {
+    opacity: 1;
+  }
+  .swiper-container-coverflow .swiper-slide-shadow-top,
+  .swiper-container-coverflow .swiper-slide-shadow-bottom {
+    opacity: 0;
+  }
+  .swiper-container-coverflow .swiper-slide-shadow-left,
+  .swiper-container-coverflow .swiper-slide-shadow-right,
+  .swiper-container-flip .swiper-slide-shadow-top,
+  .swiper-container-flip .swiper-slide-shadow-bottom {
+    opacity: 1;
+  }
+  .swiper-container-coverflow .swiper-slide-shadow-left,
+  .swiper-container-coverflow .swiper-slide-shadow-top,
+  .swiper-container-flip .swiper-slide-shadow-left,
+  .swiper-container-flip .swiper-slide-shadow-top {
+    z-index: 2;
+  }
+  .swiper-container-coverflow .swiper-slide-shadow-right,
+  .swiper-container-coverflow .swiper-slide-shadow-bottom,
+  .swiper-container-flip .swiper-slide-shadow-right,
+  .swiper-container-flip .swiper-slide-shadow-bottom {
+    z-index: 1;
+  }
+  
+  /* Swiper Flip Effect */
+  .swiper-container-flip .swiper-slide {
+    overflow: visible;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-left,
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-right,
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-top,
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-bottom {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-left {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    left: 0;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-right {
+    background-image: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    right: 0;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-top {
+    background-image: -webkit-gradient(
+      linear,
+      top left,
+      top right,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    top: 0;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide-shadow-bottom {
+    background-image: -webkit-gradient(
+      linear,
+      bottom left,
+      bottom right,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+    );
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    bottom: 0;
+  }
+  .swiper-container-flip .swiper-slide-prev,
+  .swiper-container-flip .swiper-slide-next {
+    pointer-events: auto;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide-content {
+    transform: translate3d(0, 0, 0);
+    /* fix blinking */
+  }
+  .swiper-container-flip .swiper-slide-prev,
+  .swiper-container-flip .swiper-slide-next {
+    transform: rotateY(0deg);
+    z-index: 2;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .swiper-container-flip .swiper-slide-prev .swiper-slide-content,
+  .swiper-container-flip .swiper-slide-next .swiper-slide-content {
+    opacity: 0;
+  }
+  .swiper-container-flip .swiper-slide-active .swiper-slide-prev,
+  .swiper-container-flip .swiper-slide-active .swiper-slide-next {
+    pointer-events: auto;
+  }
+  .swiper-container-flip .swiper-slide-active .swiper-slide-prev .swiper-slide-content,
+  .swiper-container-flip .swiper-slide-active .swiper-slide-next .swiper-slide-content {
+    opacity: 1;
+  }
+  .swiper-container-flip .swiper-slide-shadow-top,
+  .swiper-container-flip .swiper-slide-shadow-bottom {
+    opacity: 0;
+  }
+  .swiper-container-flip .swiper-slide-shadow-left,
+  .swiper-container-flip .swiper-slide-shadow-right {
+    opacity: 1;
+  }
+  /* Swiper Fade Effect */
+  .swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+  }
+  .swiper-container-fade .swiper-slide .swiper-slide-content {
+    opacity: 0;
+    transition-property: opacity;
+  }
+  .swiper-container-fade .swiper-slide.swiper-slide-active .swiper-slide-content {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Swiper Mousewheel Control */
+  .swiper-container-free-mode.swiper-container-mousewheel {
+    overflow: hidden;
+  }
+  .swiper-container-free-mode.swiper-container-mousewheel .swiper-wrapper {
+    transition-timing-function: ease-out;
+    /* Fix of Webkit flickering */
+    will-change: transform;
+  }
+  .swiper-container-free-mode.swiper-container-mousewheel .swiper-slide {
+    transition-timing-function: ease-out;
+    /* Fix of Webkit flickering */
+    will-change: transform;
+  }
+  .swiper-container-free-mode.swiper-container-mousewheel.swiper-container-horizontal {
+    flex-direction: column;
+  }
+  .swiper-container-free-mode.swiper-container-mousewheel .swiper-slide {
+    transform: translateY(0);
+  }
+  .swiper-container-free-mode.swiper-container-mousewheel .swiper-slide-next,
+  .swiper-container-free-mode.swiper-container-mousewheel .swiper-slide-prev {
+    opacity: 1;
+  }
+  .swiper-container-free-mode.swiper-container-mousewheel .swiper-slide-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Swiper Accessibility */
+  .swiper-container [aria-live="polite"] {
+    position: relative;
+    /* Fix of Webkit flickering */
+    will-change: contents;
+  }
+  .swiper-container [aria-live="polite"] .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+  }
+  /* Swiper IE10 Fix */
+  .swiper-container-ie10.swiper-container-horizontal,
+  .swiper-container-ie10.swiper-container-vertical {
+    overflow: hidden;
+  }
+  .swiper-container-ie10 .swiper-slide {
+    pointer-events: none;
+  }
+  .swiper-container-ie10 .swiper-wrapper {
+    display: flex;
+    transition-property: transform;
+    align-items: center;
+  }
+  .swiper-container-ie10 .swiper-slide {
+    flex-shrink: 0;
+  }
+  .swiper-container-ie10 .swiper-container-free-mode .swiper-slide {
+    transition-timing-function: ease-out;
+  }
+  .swiper-container-ie10 .swiper-container-free-mode .swiper-slide:nth-child(1) {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  .swiper-container-ie10 .swiper-container-free-mode .swiper-slide:nth-child(2) {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  /* Swiper Modernizr Fix */
+  .swiper-container-no-flexbox .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .swiper-container-no-flexbox .swiper-slide {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  .swiper-container-no-flexbox .swiper-slide .swiper-slide {
+    width: auto;
+  }
+  /* Swiper Keyboard Control */
+  .swiper-container[data-swiper-keyboard="true"] {
+    outline: none;
+  }
+  .swiper-container[data-swiper-keyboard="true"]:focus {
+    outline: none;
+  }
+  .swiper-container[data-swiper-keyboard="true"] .swiper-slide:focus {
+    outline: none;
+  }
+  .swiper-container[data-swiper-keyboard="true"] .swiper-slide:focus .swiper-slide {
+    outline: none;
+  }
+  /* Swiper Lazy Loading */
+  .swiper-lazy {
+    display: none;
+  }
+  .swiper-lazy-preloader {
+    display: block;
+  }
+  .swiper-lazy-preloader > div {
+    width: 42px;
+    height: 42px;
+    margin: 10px auto;
+    background-size: 100%;
+  }
+  /* Swiper Lazy Loading: Loading class */
+  .swiper-lazy.loading {
+    display: block;
+  }
+  .swiper-lazy.loading > div {
+    width: 42px;
+    height: 42px;
+    margin: 10px auto;
+    background-size: 100%;
+  }
+  /* Swiper Lazy Loading: Loaded class */
+  .swiper-lazy.loaded {
+    display: block;
+  }
+  .swiper-lazy.loaded > div {
+    width: 42px;
+    height: 42px;
+    margin: 10px auto;
+    background-size: 100%;
+  }
+  /* Swiper Lazy Loading: Error class */
+  .swiper-lazy-error {
+    display: block;
+  }
+  .swiper-lazy-error > div {
+    width: 42px;
+    height: 42px;
+    margin: 10px auto;
+    background-size: 100%;
+  }
+  
