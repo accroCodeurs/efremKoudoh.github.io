@@ -37,16 +37,16 @@ export function AboutScreen() {
                                 <div className="col-lg-6">
                                     <ul>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Date de Naissance:</strong> <span>03 mars 1999</span></li>
-                                        <li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                                        <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Telephone:</strong> <span>+228 92 35 05 64</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Ville:</strong> <span>Lomé, TOGO</span></li>
                                     </ul>
                                 </div>
                                 <div className="col-lg-6">
                                     <ul>
-                                        <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Junior</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>koudoh.efrem.sitsou@gmail.com</span></li>
+                                        <li><i className="bi bi-chevron-right"></i> <strong>Stage ou Alternance:</strong> <span>Disponible</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Disponible</span></li>
                                     </ul>
                                 </div>

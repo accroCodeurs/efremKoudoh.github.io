@@ -4,14 +4,14 @@ export default function PourcentageScreen() {
   const skillsData = [
     { name: "HTML", value: 100, target: 100 },
     { name: "CSS", value: 60, target: 60 },
-    { name: "JavaScript", value: 75, target: 75 },
+    { name: "JavaScript", value: 70, target: 70 },
     { name: "PHP", value: 80, target: 80 },
-    { name: "WordPress/CMS", value: 90, target: 90 },
     { name: "Laravel", value: 80, target: 80 },
     { name: "Symfony", value: 60, target: 60 },
     { name: "Reactjs/React Native", value: 70, target: 70 },
     { name: "Node.js", value: 70, target: 70 },
     { name: "MySql", value: 80, target: 80 },
+    { name: "MongoDB", value: 60, target: 60 },
     
   ];
 

@@ -20,7 +20,7 @@ export function PortofolioScreen() {
             </p>
           </div>
 
-          <div className="row" data-aos="fade-up">
+          {/*<div className="row" data-aos="fade-up">
             <div className="col-lg-12 d-flex justify-content-center">
               <ul id="portfolio-flters">
                 <li
@@ -43,7 +43,7 @@ export function PortofolioScreen() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div>*/}
 
           <div
             className="row portfolio-container"

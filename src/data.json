@@ -44,17 +44,6 @@
         "filter": "filter-app"
       },
       {
-        "id": 5,
-        "image": "",
-        "nom": "Restaurant Felicité",
-        "lien": "",
-        "description": "Description du projet 2...",
-        "date": "2023",
-        "categorie": "Application Mobile Gestion Restaurant",
-        "etat": "Terminer",
-        "filter": "filter-app"
-      },
-      {
         "id": 6,
         "image": "/assets/image/termoloca.PNG",
         "nom": "ThermoLoca",
@@ -67,17 +56,6 @@
       },
       {
         "id": 7,
-        "image": "/assets/image/portofolio.PNG",
-        "nom": "Mon Portofolio",
-        "lien": "",
-        "description": "Description du projet 3...",
-        "date": "2023",
-        "etat": "Terminer",
-        "categorie": "Mon Portofolio",
-        "filter": "filter-web"
-      },
-      {
-        "id": 8,
         "image": "/assets/image/restaurantvitrine.PNG",
         "nom": "RestaurantVitrine",
         "lien": "",

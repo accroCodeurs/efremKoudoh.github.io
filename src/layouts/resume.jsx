@@ -34,13 +34,13 @@ export function ResumeScreen() {
 
               <h3 className="resume-title">Education</h3>
               <div className="resume-item">
-                <h4>Formation Modulaire Maintenance Informatique</h4>
-                <h5>2017 - 2018</h5>
+                <h4>Cycle Ingenieur du numerique à ESAIP</h4>
+                <h5>2023 - ...</h5>
                 <p>
-                  <em>CIB-INTA, Lomé, TOGO</em>
+                  <em>ESAIP école d'ingenieur, Angers, France</em>
                 </p>
                 <p>
-                  Formation modulaire en maintenance des équipement informatique et réseaux.
+                  Je suis actuellement en troisième année du cycle ingénieur du numerique, spécialisation en cybersécurité, à l'ESAIP.
                 </p>
               </div>
               <div className="resume-item">
@@ -53,6 +53,17 @@ export function ResumeScreen() {
                   Obtention du diplôme de développeur d'application avec mention et troisième de ma promotion.
                 </p>
               </div>
+              <div className="resume-item">
+                <h4>Formation Modulaire Maintenance Informatique</h4>
+                <h5>2017 - 2018</h5>
+                <p>
+                  <em>CIB-INTA, Lomé, TOGO</em>
+                </p>
+                <p>
+                  Formation modulaire en maintenance des équipement informatique et réseaux.
+                </p>
+              </div>
+              
             </div>
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <h3 className="resume-title">Professional Experience</h3>

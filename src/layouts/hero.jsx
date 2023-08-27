@@ -23,7 +23,7 @@ export function HeroScreen() {
   return (
     <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
       <div className="hero-container" data-aos="fade-in">
-        <h1>Efrem Sitsou Selinam KOUDOH</h1>
+        <h1>Efrem S. S. KOUDOH</h1>
         <p>Je suis <span ref={typedRef} ></span></p> 
       </div>
     </section>
