@@ -9,7 +9,7 @@ function App() {
   return (
     <>
        <Routes>
-          <Route path="*" name="Accueil" element={<IndexFront/>} />   
+          <Route path="/*" name="Accueil" element={<IndexFront/>} />   
           <Route path="login" name="Login" element={<LoginScreen/>} />   
           <Route path="dashboard" name="Dashboard" element={<IndexBack/>} />   
       </Routes>
