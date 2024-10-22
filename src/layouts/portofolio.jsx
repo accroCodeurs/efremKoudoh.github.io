@@ -63,8 +63,8 @@ export function PortofolioScreen() {
                       className="img-fluid"
                       alt={item.nom}
                       style={{
-                        width: "100%",
-                        height: "100%",
+                        width: "500px",
+                        height: "200px",
                         objectFit: "cover",
                       }}
                     />

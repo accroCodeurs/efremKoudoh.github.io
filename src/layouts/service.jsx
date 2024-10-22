@@ -20,10 +20,10 @@ export function ServiceScreen() {
               <h4 className="title">
                 <a href="">Gestion de projets web</a>
               </h4>
-              <p className="description">
-                Site vitrine, corporate, évènementiel, e-commerce, intranet,
-                application mobile
+              <p className="description" style={{ textAlign: "center" }}>
+                Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile
               </p>
+
             </div>
             <div
               className="col-lg-4 col-md-6 icon-box"
@@ -36,7 +36,7 @@ export function ServiceScreen() {
               <h4 className="title">
                 <a href="">Responsive design</a>
               </h4>
-              <p className="description">
+              <p className="description" style={{ textAlign: "center" }}>
               Compatible tous supports, tablette & application mobile.
               </p>
             </div>
@@ -51,7 +51,7 @@ export function ServiceScreen() {
               <h4 className="title">
                 <a href="">Intégration Web</a>
               </h4>
-              <p className="description">
+              <p className="description" style={{ textAlign: "center" }}>
                 Des intégrations (X)HTML / CSS respectueuses des standards du
                 Web
               </p>
@@ -65,11 +65,11 @@ export function ServiceScreen() {
                 <i className="bi bi-binoculars"></i>
               </div>
               <h4 className="title">
-                <a href="">Développements spécifiques</a>
+                <a href="">Routage Statique et Dynamique</a>
               </h4>
-              <p className="description">
-              Des outils adaptés à votre coeur de métier,
-applications & solutions personnalisées
+              <p className="description" style={{ textAlign: "center" }}>
+              Capacité à configurer manuellement des routes statiques et compréhension des 
+              protocoles de routage dynamique comme OSPF et RIP pour gérer efficacement le trafic réseau.
               </p>
             </div>
             <div
@@ -81,11 +81,12 @@ applications & solutions personnalisées
                 <i className="bi bi-brightness-high"></i>
               </div>
               <h4 className="title">
-                <a href="">Dynamisme des pages</a>
+                <a href="">Pare-feu et Sécurité Réseau</a>
               </h4>
-              <p className="description">
-              Des animations de contenu non intrusives
-pour embellir votre projet.
+              <p className="description" style={{ textAlign: "center" }}>
+              Maîtrise des concepts de pare-feu pour filtrer le trafic, 
+              configurer des règles de sécurité et protéger les infrastructures 
+              contre les intrusions et attaques externes.
               </p>
             </div>
             <div
@@ -99,7 +100,7 @@ pour embellir votre projet.
               <h4 className="title">
                 <a href="">Interface d'administration</a>
               </h4>
-              <p className="description">
+              <p className="description" style={{ textAlign: "center" }}>
               Outils spécifiques au bon fonctionnement
 de votre entreprise.
               </p>

@@ -32,8 +32,30 @@
         "etat": "Terminer",
         "filter": "filter-app"
     },
-    {
-        "id": 4,
+      {
+        "id": 8,
+        "image": "/assets/image/cisco3.PNG",
+        "nom": "CISCO Configuration",
+        "lien": "",
+        "description": "Description du projet 3...",
+        "date": "2024",
+        "etat": "Terminer",
+        "categorie": "Pojet d'école d'un systéme réseau",
+        "filter": "filter-web"
+      },
+      {
+        "id": 8,
+        "image": "/assets/image/cisco2.PNG",
+        "nom": "Configuration VPN",
+        "lien": "",
+        "description": "Description du projet 3...",
+        "date": "2024",
+        "etat": "Terminer",
+        "categorie": "Pojet d'école d'un systéme réseau",
+        "filter": "filter-web"
+      },
+      {
+        "id": 9,
         "image": "/assets/image/bambule.PNG",
         "nom": "Restaurant Bambule",
         "lien": "https://bambulemangersain.com",

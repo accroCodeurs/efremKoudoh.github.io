@@ -2,20 +2,23 @@ import React, { useState, useEffect } from "react";
 
 export default function PourcentageScreen() {
   const skillsData = [
-    { name: "HTML", value: 100, target: 100 },
-    { name: "CSS", value: 60, target: 60 },
-    { name: "JavaScript", value: 70, target: 70 },
-    { name: "PHP", value: 80, target: 80 },
-    { name: "Laravel", value: 80, target: 80 },
-    { name: "Symfony", value: 60, target: 60 },
-    { name: "Reactjs/React Native", value: 70, target: 70 },
-    { name: "Node.js", value: 70, target: 70 },
-    { name: "MySql", value: 80, target: 80 },
-    { name: "MongoDB", value: 60, target: 60 },
-    
+    { name: "HTML/CSS", value: "Intermediaire", target: "Avancé" },
+    { name: "PHP/Laravel/Symfony", value: 70, target: "Intermediaire" },
+    { name: "JavaScript/Reactjs/React Native", value: 80, target: "Intermediaire" },
+    { name: "Node.js", value: 70, target: "Intermediaire" },
+    { name: "MySql/MongoDB", value: 80, target: "Intermediaire" },
+  ];
+
+  const skillsResaux = [
+    { name: "Modèles et Protocoles : OSI, TCP-IP, HTTP, DNS, DHCP", target: "Avancé" },
+    { name: "Adressage et Routage : IPv4/IPv6, VLAN, routage statique",  target: "Intermediaire" },
+    { name: "Sécurité : Pare-feu, VPN", target: "Intermediaire" },
+    { name: "Outils & Systèmes : Wireshark, Linux, Windows, PfSense",  target: "Intermediaire" },
+    { name: "Cloud & Soft Skills : Notions AWS/Azure, résolution de problèmes, travail en équipe",  target: "Intermediaire" },
   ];
 
   const [skills, setSkills] = useState(skillsData);
+  const [skillResaux, setSkillResaux] = useState(skillsResaux);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,41 +47,23 @@ export default function PourcentageScreen() {
 
           <div className="row skills-content">
             <div className="col-lg-6" data-aos="fade-up">
-              {skills.slice(0, 5).map((skill) => (
+              {skills.slice(0, 10).map((skill) => (
                 <div className="progress" key={skill.name}>
                   <span className="skill">
-                    {skill.name} <i className="val">{skill.value}%</i>
+                    {skill.name} 
                   </span>
-                  <div className="progress-bar-wrap">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      aria-valuenow={skill.value}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{ width: `${skill.value}%` }}
-                    ></div>
-                  </div>
+                  
                 </div>
               ))}
             </div>
 
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              {skills.slice(5).map((skill) => (
+              {skillResaux.slice(0, 10).map((skill) => (
                 <div className="progress" key={skill.name}>
                   <span className="skill">
-                    {skill.name} <i className="val">{skill.value}%</i>
+                    {skill.name} 
                   </span>
-                  <div className="progress-bar-wrap">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      aria-valuenow={skill.value}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{ width: `${skill.value}%` }}
-                    ></div>
-                  </div>
+                  
                 </div>
               ))}
             </div>

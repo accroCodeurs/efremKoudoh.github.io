@@ -22,25 +22,53 @@ export function ResumeScreen() {
                 <h4>Efrem Sitsou Selinam KOUDOH</h4>
                 <p>
                   <em>
-                    Etudiant en troisieme année ingenieur informatique à ESAIP aprés mon BAC+2 pour ainsi agrandir mes connaissance dans la matiére et mes relations
+                    Etudiant en quatrième année cycle ingenieur informatique à ESAIP aprés mon BAC+2 pour ainsi agrandir mes connaissance dans la matiére et mes relations
                   </em>
                 </p>
                 <ul>
                   <li>Angers, France</li>
-                  <li>(228) 92 35 05 64</li>
-                  <li>ekoudoh.efrem.sitsou@gmail.com</li>
+                  <li>(+33) 07 58 64 85 34</li>
+                  <li>koudoh.efrem.s@gmail.com</li>
                 </ul>
               </div>
 
               <h3 className="resume-title">Education</h3>
               <div className="resume-item">
-                <h4>Cycle Ingenieur du numerique à ESAIP</h4>
-                <h5>2023 - ...</h5>
+                <h4>Quatrième année Cycle Ingenieur à ESAIP</h4>
+                <h5>2024 - 2025 </h5>
                 <p>
                   <em>ESAIP école d'ingenieur, Angers, France</em>
                 </p>
                 <p>
-                  Je suis actuellement en troisième année du cycle ingénieur du numerique, spécialisation en cybersécurité, à l'ESAIP.
+                  Étudiant en quatrième année du cycle ingénieur à l'ESAIP, spécialisé en cybersécurité. 
+                  Expertise dans les solutions de sécurité informatique, les infrastructures réseaux, et 
+                  la gestion des risques. Solide expérience académique et projets pratiques dans la protection 
+                  des systèmes d’information.
+                </p>
+              </div>
+              <div className="resume-item">
+                <h4>ERASMUS + | University Veliko Turnovo (Bulgaria) </h4>
+                <h5>Semestre 2 (2023 - 2024) </h5>
+                <p>
+                  <em></em>
+                </p>
+                <p>
+                  Programme ERASMUS+ à l'Université de Veliko Turnovo en Bulgarie, semestre 2 (2023 - 2024). 
+                  Expérience internationale enrichissante axée sur l’ouverture culturelle et 
+                  le renforcement des compétences académiques en ingénierie et cybersécurité.
+                </p>
+              </div>
+              <div className="resume-item">
+                <h4>Troisième année Cycle Ingenieur à ESAIP</h4>
+                <h5>2023 - 2024 </h5>
+                <p>
+                  <em>ESAIP école d'ingenieur, Angers, France</em>
+                </p>
+                <p>
+                 Étudiant en troisième année du cycle ingénieur à l'ESAIP, spécialisé en réseaux et cybersécurité. 
+                 Compétences techniques solides en administration réseau, sécurité informatique, et développement 
+                 d’applications. Fortement engagé dans la mise en œuvre de solutions technologiques innovantes et 
+                 la gestion de projets complexes.
                 </p>
               </div>
               <div className="resume-item">
@@ -63,13 +91,43 @@ export function ResumeScreen() {
                   Formation modulaire en maintenance des équipement informatique et réseaux.
                 </p>
               </div>
-              
             </div>
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <h3 className="resume-title">Professional Experience</h3>
               <div className="resume-item">
-                <h4>Developpeur d'Aplication web & mobile</h4>
-                <h5>2021 - 2023</h5>
+                <h4>Administrateur réseaux</h4>
+                <h5>2022 - 2023</h5>
+                <p>
+                  <em>Ecole DEFITECH, Lomé, TOGO </em>
+                </p>
+                <ul>
+                  <li>
+                    Installation et Configuration des Réseaux
+                  </li>
+                  <li>
+                    Gestion et Supervision des Réseaux
+                  </li>
+                  <li>
+                    Sécurité du Réseau
+                  </li>
+                  <li>
+                    Maintenance et Support Technique
+                  </li>
+                  <li>
+                    Planification et Amélioration de l’Infrastructure
+                  </li>
+                  <li>
+                    Administration des Réseaux Cloud
+                  </li>
+                  <li>
+                    Veille Technologique et Conformité
+                  </li>
+                  
+                </ul>
+              </div>
+              <div className="resume-item">
+                <h4>Developpeur d'Aplication & administrateur réseaux</h4>
+                <h5>2021 - 2022</h5>
                 <p>
                   <em>CAGESI, Lomé, TOGO </em>
                 </p>
@@ -84,30 +142,12 @@ export function ResumeScreen() {
                     Développement des applications mobile
                   </li>
                   <li>
-                    Gestion de la planification 
+                    Installation et Configuration des Réseaux
                   </li>
                   <li>
-                    Définition du besoin en logiciels auprès du client 
+                    Gestion du pack informatique
                   </li>
-                  <li>
-                    Définition des fonctionnalités á créer 
-                  </li>
-                  <li>
-                    Analyse de l'ergonomie d'applications
-                  </li>
-                  <li>
-                    Conception de programmes spécifiques 
-                  </li>
-                  <li>
-                    Collaboration avec des graphistes pour création d'applications 
-                  </li>
-                  <li>
-                    Mises á jour de fonctionnalités sur les logiciels 
-                  </li>
-                  <li>
-                    
-                    Contacts avec sociétés clientes 
-                  </li>
+                  
                 </ul>
               </div>
               <div className="resume-item">
@@ -127,6 +167,21 @@ export function ResumeScreen() {
                     Développement de stratégies de Web responsive 
                   </li>
                 </ul>
+              </div>
+              <h3 className="resume-title">Bénevolat</h3>
+              <div className="resume-item">
+                <h4>Bénévolat au centre sécours populaire</h4>
+                <h5>2023-2024</h5>
+                <p>
+                  <em>Angers,France</em>
+                </p>
+                <p>
+                  Engagée dans la lutte contre
+                  l'insécurité alimentaire, J'ai
+                  participé activement en tant
+                  que bénévole à la collecte de
+                  la banque alimentaire.
+                </p>
               </div>
             </div>
           </div>

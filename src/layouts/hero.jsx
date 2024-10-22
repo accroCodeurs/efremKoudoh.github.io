@@ -7,7 +7,7 @@ export function HeroScreen() {
   useEffect(() => {
     const options = {
       
-      strings: ["Étudiant", "Développeur web & mobile", "Autodidacte"], 
+      strings: ["Étudiant en Cybersécurité", "Développeur web & mobile", "Autodidacte"], 
       typeSpeed: 100, 
       backSpeed: 50,
       loop: true,

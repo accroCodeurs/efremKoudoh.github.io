@@ -80,13 +80,13 @@ export function ContactScreen() {
               <div className="address">
                 <i className="bi bi-geo-alt"></i>
                 <h4>Adresse:</h4>
-                <p>4 rue gustave mareau, 49000 Angers, France</p>
+                <p>132 rue bressigny, 49000 Angers, France</p>
               </div>
 
               <div className="email">
                 <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>koudoh.efrem.selinam@gmail.com</p>
+                <p>koudoh.efrem.s@gmail.com</p>
               </div>
 
               <div className="phone">
@@ -100,7 +100,7 @@ export function ContactScreen() {
           <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form onSubmit={handleSubmit} className="php-email-form">
               <div className="row">
-                <div className="form-group col-md-6">
+                {/*<div className="form-group col-md-6">
                   <label htmlFor="name">Votre Nom</label>
                   <input
                     type="text"
@@ -154,11 +154,13 @@ export function ContactScreen() {
                 <div className="sent-message">
                   {sent && <p>Votre message a été bien envoyé. Merci à vous!</p>}
                 </div>
+              </div>*/}
               </div>
               <div className="text-center">
-                <button type="submit">Envoyer le Message</button>
+                <button type="submit">Telecharger le CV</button>
               </div>
             </form>
+              
           </div>
         </div>
       </div>

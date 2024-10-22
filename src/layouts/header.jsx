@@ -7,7 +7,7 @@ export function HeaderScreen() {
                 <div className="d-flex flex-column">
 
                 <div className="profile">
-                    <img src="../../assets/image/photo.jpg" alt="" className="img-fluid rounded-circle"/>
+                    <img src="../../assets/image/photos.jpeg" alt="" className="img-fluid rounded-circle"/>
                     <h1 className="text-light"><a href="#">Efrem Sitsou Selinam KOUDOH</a></h1>
                     <div className="social-links mt-3 text-center">
                         <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
